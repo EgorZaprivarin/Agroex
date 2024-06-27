@@ -1,0 +1,297 @@
+@import '../../var';
+
+.wrapper {
+  flex: 1 1 auto;
+
+  .main {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1710px;
+    background-color: white;
+    height: 100%;
+
+    .topPanel {
+      display: flex;
+      align-items: center;
+      min-height: 96px;
+      padding: 10px 0;
+
+      .backBtn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 25px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+
+        .lineBtn {
+          width: 100%;
+          height: 2px;
+          background-color: $black;
+        }
+
+        .lineBtn:before {
+          content: '';
+          position: absolute;
+          top: 6px;
+          left: -1px;
+          width: 10px;
+          height: 2px;
+          background-color: $black;
+          transform: rotate(135deg);
+        }
+
+        .lineBtn:after {
+          content: '';
+          position: absolute;
+          bottom: 6px;
+          left: -1px;
+          width: 10px;
+          height: 2px;
+          background-color: $black;
+          transform: rotate(225deg);
+        }
+      }
+
+      .title {
+        font-family: IBMPlexSansRegular;
+        font-size: 2rem;
+      }
+    }
+
+    .form {
+      max-width: 750px;
+      margin-bottom: 40px;
+      padding-right: 50px;
+
+      * {
+        box-sizing: border-box;
+      }
+
+      input {
+        box-sizing: border-box;
+        max-width: 342px;
+        height: 44px;
+      }
+
+      em {
+        display: flex;
+        align-items: center;
+        color: #c7c7c7;
+        font-style: normal;
+      }
+
+      .fullWidth {
+        label {
+          ~ div {
+            width: 100%;
+
+            > div {
+              max-width: 100%;
+              position: relative;
+
+              input {
+                max-width: 100%;
+              }
+
+              p {
+                margin-left: 0;
+                margin-bottom: 12px;
+              }
+            }
+          }
+        }
+
+        label {
+          display: block;
+          font-size: 1.1rem;
+          margin-bottom: 8px;
+
+          ~ .block {
+            display: flex;
+            gap: 16px;
+            height: 44px;
+            margin-bottom: 24px;
+
+            > div {
+              position: relative;
+              display: flex;
+              flex: 0 1 50%;
+              max-width: 342px;
+              height: 44px;
+            }
+
+            p {
+              margin-left: 0;
+              margin-top: -15px;
+            }
+          }
+        }
+
+        .hiddenInputsWraper {
+          display: block;
+          height: auto;
+          margin-bottom: 0;
+
+          > div {
+            display: flex;
+            flex: 0 1 50%;
+            max-width: 100%;
+            height: 44px;
+          }
+        }
+
+        .notFullWidth {
+          flex: 0 0 96px !important;
+
+          > div {
+            width: 100%;
+          }
+        }
+
+        .variety {
+          max-width: 342px !important;
+          margin-bottom: 24px;
+
+          > div {
+            flex: 0 1 100%;
+          }
+        }
+
+        .slider {
+          width: 342px;
+          margin-bottom: 16px;
+        }
+
+
+        .radioBtnWrapper {
+          align-items: center;
+          gap: 0;
+          margin-bottom: 24px;
+
+          > div {
+            align-items: center;
+          }
+
+          p {
+            margin-top: -4px;
+            margin-right: 10px;
+            font-family: IBMPlexSansRegular;
+            font-size: 1.4rem;
+            color: $black;
+          }
+
+          .radioLabel {
+            position: relative;
+            margin-bottom: 0;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all 0.5s;
+          }
+
+          .radioBtn {
+            position: absolute;
+          }
+
+          .active {
+            background-color: #183C48;
+            color: white;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 10px;
+          }
+        }
+
+        .btnContainer {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 34px;
+          margin-bottom: 16px;
+
+          > * {
+            flex: 1 1 50%;
+          }
+
+          .previewBtn {
+            background: white;
+            color: $mainGreen;
+            border: 1px solid $mainGreen;
+          }
+
+          .previewBtn:hover {
+
+          }
+
+          .addingBtn {
+            color: white;
+            background-color: $mainGreen;
+            border: 1px solid $mainGreen;
+          }
+        }
+
+        .infoAfterSubmiting {
+          color: $lightGrey;
+          font-size: 0.9rem;
+          font-family: IBMPlexSansRegular;
+        }
+
+        .hidden {
+          display: none;
+        }
+
+        .error {
+          color: red;
+        }
+      }
+    }
+
+    .notificationWrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      opacity: 0;
+      visibility: hidden;
+
+      .notificationBody {
+        padding: 5px;
+
+        img {
+          margin-bottom: 16px;
+
+        }
+
+        .title {
+          margin-bottom: 8px;
+          font-size: 20px;
+          text-align: center;
+        }
+
+        .text {
+          margin-bottom: 16px;
+          text-align: center;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .activeNotification {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+//Colors
+
+$lightGrey: #798787;
+$black: #131314;
+$lightGreen: #51ACAE;
+$mainGreen: #38999B;
+$brightGreen: #009761;
+$darkGreen: #183C48;
+
+// Fonts
+
+@font-face {
+  font-family: IBMPlexSansMedium;
+  src: local('IBMPlexSans'),
+    url('./assets/fonts/IBMPlexSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: IBMPlexSansRegular;
+  src: local('IBMPlexSansRegular'),
+    url('./assets/fonts/IBMPlexSans-Regular.ttf');
+}

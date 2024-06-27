@@ -1,0 +1,32 @@
+@import '../../var';
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+
+  a {
+    flex: 0 1 25%;
+    padding: 18px 40px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #131314;
+  }
+}
+
+.link {
+
+  &__text {
+    margin-left: 12px;
+    transition: all 0.2s ease;
+  }
+}
+
+.active {
+  border-bottom: 2px solid $mainGreen;
+
+  div {
+    color: $mainGreen;
+  }
+}

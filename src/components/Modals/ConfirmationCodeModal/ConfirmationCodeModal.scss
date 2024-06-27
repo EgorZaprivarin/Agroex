@@ -1,0 +1,102 @@
+@import '../../../var';
+
+.hidden {
+
+  .MuiPaper-root {
+    transform: translateY(-650px);
+    transition: all 1s !important;
+  }
+}
+
+.visible {
+
+  .MuiPaper-root {
+    transform: translateY(-250px);
+  }
+}
+
+.modal {
+  min-width: 350px;
+  padding: 20px 30px;
+
+  h3 {
+    color: $black;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    color: $black;
+    margin-bottom: 5px;
+  }
+
+  .invalidInput {
+    border: 1px solid #ff3333;
+  }
+
+  .invalid {
+    color: #ff3333;
+    font-size: 0.7rem;
+  }
+
+  .resendTimerText {
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-family: IBMPlexSansRegular, sans-serif;
+  }
+
+  .resendBtn {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+    background-color: white;
+    font-family: IBMPlexSansRegular, sans-serif;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    color: #969696;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  .controlPanel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    >button {
+      flex: 1 1 50%;
+    }
+
+    .cancelBtn {
+      border: 1px solid #ff6060;
+      border-radius: 3px;
+      background-color: #ffe9e9;
+      color: #ff6060;
+
+      &:hover {
+        color: #ffe9e9;
+        background-color: #ff6060;
+      }
+    }
+
+    .sendBtn {
+      border: 1px solid $mainGreen;
+      border-radius: 3px;
+      background-color: #dbf8fc;
+      color: $mainGreen;
+
+      &:hover {
+        color: #dbf8fc;
+        background-color: $mainGreen;
+      }
+    }
+  }
+}

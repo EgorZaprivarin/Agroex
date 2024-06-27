@@ -1,0 +1,76 @@
+@import './var';
+
+
+:root {
+  font-family: IBMPlexSansMedium, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+
+  color-scheme: light dark;
+  color: $black;
+  background-color: lightGrey;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+body {
+  place-items: center;
+  min-width: 800px;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.1;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+.base-Popper-root.MuiDataGrid-menu {
+  .MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters:nth-last-child(-n+2) {
+    display: none;
+  }
+}

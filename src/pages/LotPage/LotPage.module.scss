@@ -1,0 +1,32 @@
+@import '../../var.scss';
+
+.wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
+
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+
+  .buttonMap {
+    text-align: center;
+    text-transform: none;
+    font-size: 1.2em;
+    color: $mainGreen;
+  }
+}
+
+@media only all and (max-width: 1150px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+}

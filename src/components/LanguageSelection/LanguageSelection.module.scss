@@ -1,0 +1,80 @@
+@import '../../var';
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    margin-left: 7px;
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    box-shadow: -1px 0px 8px 1px rgba(0,0,0,0.16);
+  }
+
+  .currencyOptions {
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    min-width: 230px;
+    background-color: white;
+    border-radius: 8px;
+    color: $black;
+    box-shadow: 0 1px 8px 3px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s all;
+
+    .option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 12px;
+      border-bottom: 1px solid #f1f1f1;
+      height: 1px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s all;
+
+      &:first-child {
+        border-radius: 8px 8px 0 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+        border-radius: 0 0 8px 8px;
+      }
+
+      &:hover {
+        background-color: #e9fcff;
+      }
+
+      .optionValue {
+        display: flex;
+        align-items: center;
+      }
+
+      .hintText {
+        font-family: IBMPlexSansRegular, sans-serif;
+      }
+    }
+
+    .selectedCurrency {
+      background-color: #f3f3f3;
+    }
+  }
+
+  .visibleOptions {
+    opacity: 1;
+    visibility: visible;
+
+    .option {
+      height: 39px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

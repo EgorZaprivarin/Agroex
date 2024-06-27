@@ -1,0 +1,67 @@
+@import '../../../var.scss';
+
+.content {
+    flex: 1 1 auto;
+
+    .personalData {
+        padding: 24px 40px;
+
+        .info {
+            display: flex;
+            gap: 40px;
+            max-width: 576px;
+            margin-top: 24px;
+
+            .avatar {
+                position: relative;
+                flex: 0 0 160px;
+                height: 160px;
+
+                .badge {
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    left: 136px;
+                    top: 136px;
+                }
+            }
+
+            .fields {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+
+                .buttonsBlock {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+
+    .security {
+        padding: 24px 40px;
+
+        button:nth-child(2) {
+            margin-top: 24px;
+            width: 200px;
+        }
+
+        button:nth-child(3) {
+            margin-top: 12px;
+            width: 200px;
+            border-color: #d32f2f;
+            color: #d32f2f;
+        }
+
+    }
+
+    .sectionTitle {
+        color: rgb(19, 19, 20);
+        font-size: 1.1rem;
+        line-height: 1.75rem;
+        letter-spacing: 0.4px;
+        text-align: left;
+    }
+}

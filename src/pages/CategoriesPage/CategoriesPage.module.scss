@@ -1,0 +1,16 @@
+@import '../../var';
+
+.wrapper {
+  display: flex;
+  color: $black;
+  margin: 1px 0 62px;
+
+  .noProductsBlock {
+    margin: 80px auto 0;
+    text-align: center;
+
+    img {
+      width: 75%;
+    }
+  }
+}

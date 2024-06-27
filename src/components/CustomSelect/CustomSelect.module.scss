@@ -1,0 +1,11 @@
+.error {
+  position: absolute !important;
+  margin: 0 !important;
+  font-size: 0.8rem;
+  color: red;
+}
+
+input:disabled ~ fieldset {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+

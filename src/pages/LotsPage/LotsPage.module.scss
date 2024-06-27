@@ -1,0 +1,17 @@
+@import '../../var';
+
+.wrapper {
+    display: flex;
+    color: $black;
+}
+
+
+.wrapper>div:first-child {
+    flex: 0 0 320px;
+}
+
+@media only all and (max-width: 1200px) {
+    .wrapper>div:first-child {
+        flex: 0 0 250px;
+    }
+}

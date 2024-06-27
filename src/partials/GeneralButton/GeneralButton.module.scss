@@ -1,0 +1,42 @@
+@import '../../var.scss';
+
+.btn {
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 2px solid $mainGreen;
+    font-family: IBMPlexSansMedium;
+    border-radius: 2px;
+    color: $mainGreen;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnWhite {
+    background-color: #fff;
+    color: $mainGreen;
+}
+
+.btnGreen {
+    background-color: $mainGreen;
+    color: #fff;
+}
+
+.btnGray {
+    background-color: #e6e6e6;
+    color: #bcc3c3;
+    border: 2px solid #e6e6e6;
+}
+
+.btnRed {
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+}

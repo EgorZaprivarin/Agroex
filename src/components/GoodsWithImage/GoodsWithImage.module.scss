@@ -1,0 +1,46 @@
+@import '../../var';
+
+.container {
+  flex: 1 1 75%;
+  overflow: hidden;
+
+  .imgContainer {
+    position: relative;
+    padding-bottom: 17%;
+    margin-bottom: 2px;
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 25px;
+    height: 50px;
+    color: white;
+    font-family: IBMPlexSansRegular;
+    font-size: 2em;
+    background-color: rgb(0, 0, 0, 35%);
+  }
+}
+
+
+@media only all and (max-width: 1130px) {
+  .container {
+
+    .title {
+      padding-left: 15px;
+      height: 40px;
+      font-size: 1.5em;
+    }
+  }
+}

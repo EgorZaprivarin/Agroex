@@ -1,0 +1,45 @@
+@import '../../var';
+
+.pagination {
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .infinityLoadBtn {
+    display: flex;
+    align-items: center;
+    color: $mainGreen;
+    margin-left: 350px;
+    cursor: pointer;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $darkGreen;
+
+      svg {
+
+        path {
+          fill: $darkGreen;
+        }
+      }
+    }
+  }
+
+  .hiddenLoadBtn {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media only all and (max-width: 950px) {
+  .pagination {
+
+    .infinityLoadBtn {
+      margin-left: 85px;
+    }
+  }
+}

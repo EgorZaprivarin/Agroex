@@ -1,0 +1,141 @@
+@import '../../var';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 160px !important;
+  margin-bottom: 5px;
+  border: 1px dashed $lightGrey;
+  cursor: grab;
+
+  .title {
+    text-align: center;
+    font-size: 0.9rem;
+
+    span {
+      color: $mainGreen;
+    }
+  }
+
+  .subTitle {
+    color: $lightGrey;
+    font-family: IBMPlexSansRegular, sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .disabledText {
+    color: $lightGrey;
+    font-size: 1.1rem;
+    font-family: IBMPlexSansRegular, sans-serif;
+  }
+}
+
+.quantityImg {
+  margin-bottom: 39px;
+  color: $lightGrey;
+  font-size: 0.8rem;
+}
+
+.imgWrapper {
+  display: flex;
+  gap: 25px;
+
+  .item {
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+
+    .img {
+      padding: 2px;
+      border: 2px solid $lightGrey;
+      border-radius: 6px;
+      opacity: 0.5;
+    }
+
+    &:hover .img {
+      border: 2px solid $black;
+    }
+
+    .closeBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -13px;
+      right: -13px;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $lightGrey;
+        transform: rotate(45deg);
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $lightGrey;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:hover .closeBtn span,
+    &:hover .closeBtn span:before {
+      background-color: $black;
+    }
+
+    .opacityText {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 116px;
+      height: 96px;
+      border-radius: 6px;
+      padding: 2px;
+      color: $black;
+      opacity: 0;
+    }
+
+    &:hover .opacityText {
+      opacity: 1;
+    }
+
+    .closeBtn:hover ~ .opacityText {
+      opacity: 0;
+    }
+
+    .fileName {
+      white-space: normal;
+      font-family: IBMPlexSansRegular;
+      font-size: 0.8rem;
+      overflow: hidden;
+    }
+  }
+
+  .titleImg {
+
+    .img {
+      border: 2px solid $mainGreen;
+      opacity: 1;
+    }
+
+    .closeBtn span,
+    .closeBtn span:before {
+      background-color: $mainGreen;
+    }
+  }
+}

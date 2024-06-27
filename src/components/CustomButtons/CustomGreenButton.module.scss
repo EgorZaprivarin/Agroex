@@ -1,0 +1,49 @@
+@import '../../var.scss';
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: $mainGreen;
+  border: 1px solid $mainGreen;
+  cursor: pointer;
+  font-family: IBMPlexSansMedium, sans-serif;
+
+  &:disabled {
+    background-color: #E6E6E6;
+    border: 1px solid #E6E6E6;
+    color: #BCC3C3;
+  }
+
+  .disabledButtonHint {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 1px;
+    padding: 9px 12px;
+    border: 1px solid #979797;
+    border-radius: 4px;
+    background-color: #94dbd7;
+    color: #6f6f6f;
+    font-size: 0.001rem;
+    box-shadow: 1px 1px 6px 0px rgb(0 98 107 / 68%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+  }
+
+  &:disabled:hover .disabledButtonHint {
+    left: 0;
+    bottom: 120%;
+    width: 100%;
+    font-size: 0.95rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}

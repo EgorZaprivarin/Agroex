@@ -1,0 +1,77 @@
+@import '../../var.scss';
+
+.container {
+    padding: 20px 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: flex-start;
+    box-shadow: inset 0px -1px 0px 0px rgb(230, 230, 230), inset -1px 0px 0px 0px rgb(230, 230, 230);
+
+    .div {
+        width: 100%;
+    }
+
+    .checkboxList {
+        list-style-type: none;
+        margin-bottom: 16px;
+
+        li {
+            display: flex;
+            align-items: center;
+            max-height: 40px;
+            padding: 6px 16px;
+        }
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        p {
+            font-size: 18px;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    .sliderSection {
+
+        .sliderField {
+            display: flex;
+        }
+    }
+
+    .counterAndClear {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+
+        .counter {
+            white-space: pre;
+        }
+
+        .clearBtn {
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+            padding-left: 3px;
+            color: #BCC3C3;
+            transition: color 0.3s, border-left-color 0.3s;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}

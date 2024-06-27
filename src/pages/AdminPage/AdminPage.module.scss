@@ -1,0 +1,116 @@
+@import '../../var.scss';
+
+.wrapper {
+    flex: 1 1 auto;
+    min-height: 710px;
+
+    .main {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1710px;
+        background-color: white;
+        height: 100%;
+
+        .admin {
+
+            &__side {
+                flex: 0 0 270px;
+                padding: 30px;
+                transition: transform 0.3s ease;
+            }
+
+            &__content {
+                flex: 1 1 auto;
+                padding: 30px;
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .panel {
+            &__title {
+                margin: 0 0 30px 15px;
+                color: #51ACAE;
+            }
+
+            &__list {
+                li {
+                    display: flex;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+
+                    :hover {
+                        color: $mainGreen;
+
+                        svg {
+                            fill: $mainGreen;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .dropdown {
+            margin-left: 25px;
+            padding: 5px;
+
+            ul {
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1400px) {
+    .main {
+        .admin {
+            &__content {
+                width: 800px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .main {
+        .admin {
+            &__side {
+                flex: 0 0 200px;
+            }
+
+            &__content {
+                width: 550px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    .main {
+        .admin {
+            &__content {
+                width: 460px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        .main {
+            flex-direction: column;
+
+            .admin {
+                &__content {
+                    padding-top: 0;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}

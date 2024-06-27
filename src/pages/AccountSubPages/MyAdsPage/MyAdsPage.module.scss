@@ -1,0 +1,43 @@
+@import '../../../var.scss';
+
+.content {
+    flex: 1 1 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+    margin-bottom: 25px;
+
+    .contentTabs {
+        display: flex;
+        height: 48px;
+        margin-bottom: 25px;
+
+        .contentTab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 1 268px;
+            height: 48px;
+            padding: 10px 16px;
+            color: rgb(19, 19, 20);
+            font-size: 1.1rem;
+            line-height: 1.75rem;
+            letter-spacing: 0.4px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .activeContentTab {
+            border-bottom: 2px solid $mainGreen;
+        }
+    }
+
+    .contentContainer {
+        flex: 1 1 auto;
+
+        .loading {
+            display: block;
+            margin: 100px auto;
+        }
+    }
+}

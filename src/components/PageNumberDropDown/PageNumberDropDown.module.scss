@@ -1,0 +1,64 @@
+@import '../../var';
+
+.pageNubmerDropDown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .number {
+    margin-right: 10px;
+    font-family: IBMPlexSansRegular, sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .arrowWrapper {
+    display: flex;
+
+    svg {
+      transition: 0.3s all;
+    }
+  }
+
+  .activeArrow {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .pageNumbersDropDown {
+    position: absolute;
+    left: -9px;
+    top: 29px;
+    width: 47px;
+    max-height: 1px;
+    overflow: auto;
+    scrollbar-width: thin;
+    background-color: white;
+    box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+
+    li  {
+      padding: 3px 3px 3px 9px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid lightGrey;
+
+      &:hover {
+        background-color: $mainGreen;
+      }
+    }
+
+    .activePage {
+      background-color: $mainGreen;
+      color: white;
+    }
+  }
+
+  .visibleSelector {
+    max-height: 138px;
+    opacity: 1;
+    visibility: visible;
+  }
+}

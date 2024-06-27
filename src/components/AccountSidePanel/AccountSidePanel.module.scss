@@ -1,0 +1,87 @@
+@import '../../var.scss';
+
+.sidePannel {
+    flex: 0 0 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 88px 0px 24px 0px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+    .sideTabs {
+        width: 100%;
+
+        .sideTab {
+            display: flex;
+            gap: 12px;
+            padding: 18px 16px;
+            width: 100%;
+            height: 64px;
+            justify-content: flex-start;
+            align-items: center;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 0px;
+            cursor: pointer;
+
+            &:hover {
+                background: rgb(238, 248, 248);
+            }
+
+            .title {
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.4px;
+                text-align: left;
+            }
+        }
+
+        .activeSideTab {
+            li {
+                color: $mainGreen;
+                border-right: 2px solid $mainGreen;
+                background: rgb(238, 248, 248);
+            }
+        }
+    }
+
+    .logOut {
+        display: flex;
+        align-items: center;
+        padding: 18px 16px;
+        width: 100%;
+        height: 64px;
+        gap: 12px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(238, 248, 248);
+        }
+    }
+}
+
+@media only all and (max-width: 850px) {
+    .sidePannel {
+        flex: 0 0 220px;
+
+        .sideTabs {
+
+            .sideTab {
+
+                .title {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+
+        .logOut {
+            font-size: 0.95rem;
+        }
+    }
+}

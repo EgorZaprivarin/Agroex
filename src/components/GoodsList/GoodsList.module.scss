@@ -1,0 +1,17 @@
+@import '../../var';
+
+.goodsList {
+  flex: 0 0 270px;
+
+  li {
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only all and (max-width: 1120px) {
+  .goodsList {
+    flex: 0 1 25%;
+  }
+}

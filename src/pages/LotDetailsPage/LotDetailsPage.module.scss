@@ -1,0 +1,84 @@
+@import '../../var';
+
+.wrapper {
+    flex: 1 1 auto;
+
+    .main {
+        margin: 0 auto;
+        max-width: 1710px;
+        background-color: white;
+        height: 100%;
+
+        .sectionHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 10px;
+
+            .title {}
+
+            .leftSide {
+                display: flex;
+                gap: 20px;
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            .rightSide {
+                display: flex;
+                gap: 20px;
+            }
+
+
+        }
+
+
+        .container {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 25px;
+            padding: 10px 20px;
+
+            .info {
+                flex: 0 1 50%;
+
+                .lotTitle {
+                    margin-bottom: 12px;
+                    font-family: IBMPlexSansRegular, sans-serif;
+                    font-size: 2rem;
+                }
+
+                .infoRow {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    padding: 16px;
+                    border-bottom: 1px solid #e8e8e8;
+
+                    .property {
+                        flex: 0 1 50%;
+                        color: $lightGrey;
+                        font-size: 1.25rem;
+                    }
+
+                    .value {
+                        flex: 0 1 50%;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .rejectReason {
+                    color: #d32f2f;
+                }
+            }
+
+        }
+    }
+}

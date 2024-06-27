@@ -1,0 +1,69 @@
+@import '../../var';
+
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: IBMPlexSansRegular, sans-serif;
+
+  .numberOfLotsWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .numberOfLots {}
+
+    .arrowWrapper {
+      display: flex;
+    }
+
+    .arrowUp {
+      transform: rotate(180deg);
+    }
+
+    .numberOfLotsMenu {
+      z-index: 10;
+      position: absolute;
+      left: -5px;
+      top: 25px;
+      height: 1px;
+      background-color: white;
+      box-shadow: 1px 3px 12px 0px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s all;
+
+      li {
+        height: 1px;
+        padding: 5px;
+        border-bottom: 1px solid lightGrey;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s all;
+
+        &:hover {
+          background-color: $lightGreen;
+          color: white;
+        }
+      }
+
+      .currentOption {
+        background-color: $lightGreen;
+        color: white;
+      }
+    }
+
+    .visibleOptionMenu {
+      height: 105px;
+      opacity: 1;
+      visibility: visible;
+
+      li {
+        height: 35px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

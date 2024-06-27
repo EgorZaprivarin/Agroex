@@ -1,0 +1,35 @@
+@import '../../var';
+
+.modal {
+  padding: 40px;
+  max-width: 408px;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 24px;
+    font-family: IBMPlexSansRegular, sans-serif;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    background: white;
+    border: none;
+    font-size: 1rem;
+    font-family: IBMPlexSansMedium, sans-serif;
+    cursor: pointer;
+  }
+
+  .discard {
+    color: red;
+    margin-bottom: 32px;
+  }
+
+  .cancel {
+    color: $mainGreen;
+  }
+}

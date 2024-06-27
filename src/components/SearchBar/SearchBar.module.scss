@@ -1,0 +1,145 @@
+@import '../../var.scss';
+
+.searchBar {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    height: 2.75rem;
+    background-color: #fff;
+    color: #798787;
+    width: calc(100% - 40px);
+    font-family: IBMPlexSansRegular;
+    line-height: 24px;
+    text-align: left;
+    cursor: pointer;
+
+    input {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .searchResults {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        height: 50vh;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        color: #131314;
+        overflow-y: auto;
+
+        .subcategorySection {
+            width: 100%;
+            padding: 15px 15px 0 15px;
+
+            .subcategoryHeader {
+                display: flex;
+                justify-content: space-between;
+
+                .leftSide {
+                    display: flex;
+                    gap: 10px;
+
+                    .counter {
+                        font-size: 0.875rem;
+                        color: #798787;
+
+                    }
+                }
+
+            }
+
+            .subcategoryTitle {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .lotsWrapper {
+                margin: 10px 0 0 10px;
+
+                .lot {
+                    display: flex;
+                    align-items: end;
+                    gap: 5px;
+                    margin-bottom: 0.5rem;
+
+                    .imgWrapper {
+                        position: relative;
+                        flex: 0 0 95px;
+                        height: 60px;
+
+                        img {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-radius: 2px;
+                        }
+                    }
+
+                    .descrWrapper {
+                        display: flex;
+                        flex-direction: column;
+
+                        .lotTitle {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .lotDescr {
+                            color: $lightGrey;
+                            line-height: 1;
+
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.04)
+                    }
+                }
+
+            }
+        }
+
+        .notFoundMessage {
+            margin: 20px;
+            color: $lightGrey;
+        }
+
+    }
+}
+
+.expanded {
+    border: 1px solid #131314;
+    position: absolute;
+    top: 24px;
+    z-index: 2;
+    max-width: 1713px;
+}
+
+.hiddenSection {
+    display: none;
+}
+
+// @media only all and (max-width: 1120px) {
+//     .lotTitle {
+//         font-size: 1rem;
+//     }
+
+//     .lotDescr {
+//         line-height: 1rem;
+//         font-size: 14px;
+//     }
+// }

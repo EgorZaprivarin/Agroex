@@ -1,0 +1,9 @@
+.filterTagsContainer {
+    flex: 0 1 45%;
+}
+
+@media only all and (max-width: 950px) {
+    .filterTagsContainer {
+        display: none;
+    }
+}
